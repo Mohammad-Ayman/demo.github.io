@@ -1,0 +1,86 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.page {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 50px 50px 1fr 50px;
+}
+
+header {
+  text-align: center;
+  padding: 1.5%;
+}
+.nav {
+  text-align: center;
+}
+.nav ol {
+  display: inline;
+  margin: 2.5%;
+}
+.main {
+  margin: 4%;
+  display: grid;
+  grid-template-columns: /*1fr 1fr 1fr*/ repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "section1 section1 section1"
+    "section2 section2 section2";
+}
+
+.section1 {
+  grid-area: section1;
+  background-color: aliceblue;
+}
+.section2 {
+  grid-area: section2;
+
+  display: grid;
+  grid-template-columns: /*1fr 1fr 1fr*/ repeat(3, auto);
+  grid-template-rows: 1fr;
+  grid-template-areas: "article2 article3 article4";
+}
+
+.article2 {
+  grid-area: article2;
+  background-color: antiquewhite;
+}
+.article3 {
+  grid-area: article3;
+  background-color: aqua;
+}
+.article4 {
+  grid-area: article4;
+  background-color: aquamarine;
+}
+
+.section2 {
+  margin-top: 4%;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: "logo nav";
+}
+.footer-logo {
+  grid-area: logo;
+  background-color: azure;
+}
+.footer-nav {
+  grid-area: nav;
+  background-color: beige;
+}
+
+.logo-r {
+  max-width: 100%;
+}
+
+.ll {
+  /* margin: 10px; */
+  width: fit-content;
+  max-width: 10%;
+}
